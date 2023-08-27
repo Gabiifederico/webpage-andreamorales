@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Andre Morales - contacto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/contactoStile.css">
+    <link rel="icon" type="image/vnd.icon" href="../img/favicon.ico">
+
+</head>
+
+<body>
+    <header>
+        <div class="larg">
+            <div class="menu">
+                <h1>
+                    <img src="../img/logo-edit3.png" class="logo-pri" alt="" />
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html"> SOBRE MI</a></li>
+                        <li><a href="../index.html">TERAPIAS</a></li>
+                        <li class="esconder-celular">
+                            <a href="../index.html">TESTIMONIOS</a>
+                        </li>
+                        <li><a href="../index.html">ATENCION</a></li>
+
+                        <li><a href="#CONTACTO">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- final encabezado-->
+
+    <!-- Inicio foto y logo inicial-->
+    <!-- el main es la parte principal de una pagina web en el es donde alojaremos el contenido mas relevante del sitio el cual podremos dividir en secciones  en este caso el main esta divido en 4 secciones en las cuales podemos encontrar contenedores div para dividirlas en diferentes partes en la primer seccion podemos observar una imagen y un logo, en la seccion sobre mi podemos ver las etiquetas "h" que son las que utilizamos para titulos y subtitulos que abarcan en tamaños desde el h1 al h6 siendo el mas pequeño,
+    tambien podemos ver etiquetas p que son las etiquetas para parrafos asi como tambien la etiqueta class y la etiqueta id que son las que nos van a servir para identificar cada parte de la pagina para poder darles estilos personalizados con css las clases abarcan a todos los elementos y los id solo a un elemento especifico que seran segun el nombre que le demos a las clases o ids -->
+
+    <main>
+        <section class="principal">
+            <div class="larg">
+                <img class="foto" src="../img/foto-psi.jpg" alt="" />
+
+                <img class="logo-foto esconder-site" src="../img/5-logo-color.png" alt="" />
+            </div>
+        </section>
+
+        <!-- final foto y logo inicial-->
+
+        <!-- Inicio -->
+
+        <section class="sobreMi" id="sobre-mi">
+            <div class="larg">
+                <div class="sobre-parte1">
+
+                    <section class="reservation">
+                        <div class="reservation__heading">
+                            <h5>CONTACTO</h5>
+                            <h4>INGRESA TU INQUIETUD</h4>
+                        </div>
+                        <form class="reservation__form">
+                            <input class="name" type="text" placeholder="NOMBRE" name="name">
+                            <input class="email" type="email" placeholder="Email" name="email">
+                            <input class="comment" type="text" placeholder="Ingrese su comentario" name="comment">
+
+                            <input class="button" type="button" value="Enviar">
+                        </form>
+                    </section>
+    </main>
+    <!-- inicio  pie pagina o footer  aqui pondremos informacion del autor, enlaces y cosas relacionadas con la pagina  -->
+    <footer class="rodape" id="atenciones">
+        <div class="larg">
+            <h2>ATENCION</h2>
+            <p class="boton-contacto" id="CONTACTO"> <a href="./contacto.html">COMUNIQUESE PARA MAS INFORMACION</a> </p>
+
+            <div class="atencion">
+                <img class="imagemcontacto" src="../img/icone-consulta-online.png" alt="Online" />
+
+                <p class="atencion-horario">
+                    Atencion on-line en toda la Argentina
+                </p>
+
+                <p>De Lunes a de Viernes 10 a 16hs</p>
+            </div>
+            <div class="atencion">
+                <img class="imagemcontacto" src="../img/icone-consulta-presencial.png" alt="Consulta presencial" />
+                <p class="atencion-horario">Atencion Presencial</p>
+                <p>Lunes - Clinica los arcos</p>
+                <p>Lunes - Martes - Clinica solis</p>
+            </div>
+            <div class="redes-social">
+                <a href="#" class="btn-facebook btn-social"> </a>
+                <a href="#" class="btn-instagran btn-social"> </a>
+                <a href="#" class="btn-linkedin btn-social"> </a>
+            </div>
+        </div>
+    </footer>
+    <!-- final  pie de pagina o footer -->
+
+    <!-- el siguente div contiene informacion  sobre el logo de wsp que asu vez aloja  mediante un link la redireccion a un numero de telefono para poder contratar o obtener mas informacion para saber mas sobre la api de wsp podemos buscarla en la pagina de wps. al igual cuenta con un cnd que va a ser el archivo de instalacion de la api un botton que va a ser el que al presionar nos redirige al sitio de wsp con un mensaje de bienvenida asu vez cuenta con el atributo target que lo que hace que al presionar dicho logo no se abra el enlace en la misma pestaña sino que en una nueva  y un text que va a ser el mensaje de boenvenida -->
+
+
+    <div class="whatsapp">
+        <link rel="stylesheet"
+            href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css" />
+        <a id="robbu-whatsapp-button" target="_blank"
+            href="https://api.whatsapp.com/send?phone=+541176458144&text= Hola Andrea estoy interesado en tus servicios. ">
+            <div class="rwb-tooltip">Contacto</div>
+            <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg" />
+        </a>
+    </div>
+
+
+
+
+    </div>
+    </section>
+
+</body>
+
+</html>

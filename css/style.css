@@ -1,0 +1,852 @@
+/* dentro de este arcshivo con extension css podremos alojar todos aquellos estilos que daremos a nuestra pagina o sitio web 
+llamando a cada elemento para poder aplicar dicho estilos sea por nombre identificatorio de etiqueta, class o id */
+
+@font-face {
+  font-family: "Jost";
+  src: url("./font/Jost-Regular.woff2") format("woff2"),
+    url("./font/Jost-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Jost";
+}
+
+.esconder-celular {
+  display: none;
+}
+
+.esconder-site {
+  display: inherit;
+}
+
+/* inicio encabezado/menu*/
+/* Estilos para el encabezado (header):
+   - Fondo blanco
+   - Fijado en la parte superior de la ventana
+   - Z-index alto para superponer otros elementos
+   - Ancho completo
+   - Sombra suave para crear profundidad */
+header {
+  background-color: #ffffff;
+  position: fixed !important;
+  z-index: 999999;
+  width: 100%;
+  box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 30%);
+}
+/* Estilos para la clase .menu:
+   - Ancho completo para abarcar el contenedor
+   - Modelo de caja flexible para distribuir el espacio entre elementos
+   - Alineación vertical del contenido al centro
+   - Distribución horizontal del espacio entre elementos
+   - Alineación vertical de elementos estirándolos para llenar la altura */
+.menu {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: stretch;
+}
+/* Estilos para la barra de navegación (nav):
+   - Utiliza flexbox para alinear los elementos horizontalmente
+   - Alineación vertical de los elementos al centro
+   - Margen derecho para separación entre elementos */
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+}
+/* Estilos para los elementos de lista en la barra de navegación (nav li):
+   - Mostrar los elementos de lista en línea
+   - Aplicar negrita al texto de los elementos
+   - Agregar espacio interno alrededor de los elementos */
+
+nav li {
+  display: inline;
+  font-weight: bold;
+  padding: 5px;
+}
+/* Estilos para los enlaces en la barra de navegación (nav a):
+   - Quitar la decoración de subrayado de los enlaces
+   - Aplicar negrita al texto de los enlaces
+   - Color de texto gris para los enlaces
+   - Tamaño de fuente de 11 píxeles */
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #737373;
+  font-size: 11px;
+}
+/* Estilos para los enlaces en estado de hover (nav a:hover):
+   - Cambio de color de texto al pasar el cursor sobre los enlaces
+   - Restaurar la decoración de subrayado al pasar el cursor sobre los enlaces */
+nav a:hover {
+  color: #ca4949;
+  text-decoration: underline;
+}
+/* Estilos para el logotipo en la barra de navegación (.logo-pri):
+   - Ancho de 120 píxeles para el logotipo
+   - Margen de 10 píxeles en todas las direcciones alrededor del logotipo */
+.logo-pri {
+  width: 120px;
+  margin: 10px;
+}
+
+/* inicio foto con logo*/
+/* Estilos para la sección principal (.principal):
+   - Color de fondo #f6dfd7
+   - Imagen de fondo desde la ruta "../img/fundo-banner-principal.png"
+   - Ancho del 100% de la sección
+   - Fijación de la imagen de fondo mientras se desplaza
+   - Espacio interno en la parte superior de 60 píxeles y en la parte inferior de 20 píxeles */
+.principal {
+  background-color: #f6dfd7;
+  background-image: url(../img/fundo-banner-principal.png);
+  width: 100%;
+  background-attachment: fixed;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+/* Estilos para el contenedor dentro de la sección principal (.principal .larg):
+   - Utiliza el modelo de cuadrícula CSS para el diseño de elementos */
+.principal .larg {
+  display: grid;
+}
+/* Estilos para el logotipo de la foto (.logo-foto):
+   - Ancho de 300 píxeles para el logotipo de la foto
+   - Centrar horizontalmente el logotipo utilizando márgenes automáticos en los lados izquierdo y derecho */
+.logo-foto {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Estilos para la imagen de foto (.foto):
+   - Borde redondeado con un radio del 50%
+   - Ancho de 300 píxeles para la imagen de foto
+   - Centrar horizontalmente la imagen utilizando márgenes automáticos en los lados izquierdo y derecho */
+.foto {
+  border-radius: 50%;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* final foto co logo*/
+
+/* inicio sobremi*/
+/* Estilos para la sección "Sobre mí" (.sobreMi):
+   - Imagen de fondo desde la ruta "../img/flores-fundo-conheca.png"
+   - Color de fondo #b48fff
+   - Utiliza un contenedor de flexión en línea con contenido centrado
+   - Espacios internos en los lados izquierdo y derecho de 35 píxeles
+   - Espacios internos en la parte superior e inferior de 40 píxeles
+   - Fijación de la imagen de fondo mientras se desplaza
+   - Posición de fondo centrada horizontalmente con desplazamiento hacia la izquierda de 240 píxeles
+   - Ancho calculado del 100% del contenedor padre */
+
+.sobreMi {
+  background-image: url(../img/flores-fundo-conheca.png);
+  background-color: #b48fff;
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 35px;
+  padding-top: 40px;
+  padding-right: 35px;
+  padding-bottom: 40px;
+  background-attachment: fixed;
+  background-position: -240px center;
+  width: calc(100% - 70px);
+}
+/* Estilos generales para los encabezados <h2> dentro de la sección "Sobre mí":
+   - Color de texto blanco (#ffffff)
+   - Tamaño de fuente de 30 píxeles
+   - Sombra de texto con desplazamiento de 1 píxel en ambas direcciones y color negro (#000000)
+   - Márgenes superiores e inferiores de 15 píxeles para separación */
+h2 {
+  color: #ffffff;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px #000000;
+  margin: 15px 0;
+}
+/* Estilos generales para los encabezados <h3> dentro de la sección "Sobre mí":
+   - Tamaño de fuente de 25 píxeles
+   - Color de texto blanco (#ffffff)
+   - Márgenes superiores e inferiores de 15 píxeles para separación */
+h3 {
+  font-size: 25px;
+  color: #ffffff;
+  margin: 15px 0;
+}
+/* Estilos generales para los párrafos <p> dentro de la sección "Sobre mí":
+   - Tamaño de fuente de 18 píxeles
+   - Altura de línea de 26 píxeles para un espaciado adecuado entre líneas */
+p {
+  font-size: 18px;
+  line-height: 26px;
+}
+/* Estilos generales para la imagen con clase "imagem-quadro":
+   - Ancho del 100% del contenedor
+   - Margen superior e inferior de 40 píxeles */
+.imagem-quadro {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+/* Estilos generales para el contenedor con clase "larg":
+   - Ancho máximo de 1300 píxeles para limitar el ancho del contenido
+   - Margen horizontal automático para centrar el contenedor en la pantalla */
+.larg {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+/* Estilos generales para los encabezados <h2> dentro de las secciones "sobre-parte1" y "sobre-parte2":
+   - Alineación de texto centrada */
+.sobre-parte1 h2,
+.sobre-parte2 h2 {
+  text-align: center;
+}
+
+/* final sobre mi*/
+
+/* Inicio Terapias*/
+/* Estilos para la sección con clase "terapia":
+   - Fondo con imagen y posición específica
+   - Color de fondo de respaldo #eeeeee
+   - No repetición de la imagen de fondo
+   - Visualización en línea-flex y justificación centrada
+   - Ancho del 100% */
+.terapia {
+  background-image: url(../img/flor-fundo-terapias.png);
+  background-position: 0 108%;
+  background-color: #eeeeee;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+/* Estilos para el contenedor con clase "larg" dentro de la sección "terapia":
+   - Relleno de 40px en vertical y 20px en horizontal */
+.terapia .larg {
+  padding: 40px 20px;
+}
+/* Estilos para el panel con clase "panel-servicios":
+   - Fondo blanco
+   - Bordes redondeados con radio de 10px
+   - Texto centrado
+   - Relleno de 10px
+   - Margen superior e inferior de 20px, margen lateral de 0
+   - Sombra de caja de 5px de desplazamiento horizontal y vertical, color rgba(0, 0, 0, 0.3) */
+.panel-servicios {
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  margin: 20px 0;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+/* Estilos para la imagen con clase "imagem-panel":
+   - Borde redondeado con radio del 50%
+   - Ancho del 60% */
+.imagem-panel {
+  border-radius: 50%;
+  width: 60%;
+}
+/* Estilos para los encabezados h3 dentro de elementos con clase "panel-servicios":
+   - Tamaño de fuente de 25px
+   - Peso de fuente en negrita
+   - Color de texto en #cd5759 (rojo)
+   - Margen inferior de 10px */
+.panel-servicios h3 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #cd5759;
+  margin-bottom: 10px;
+}
+
+.panel-servicios p {
+  margin-bottom: 18px;
+}
+/* Estilos para los enlaces (a) dentro de elementos con clase "panel-servicios":
+   - Fondo de color #cd5759 (rojo)
+   - Color de texto en #ffffff (blanco)
+   - Sin decoración de texto (sin subrayado)
+   - Ancho del 70% del contenedor
+   - Borde redondeado de 25px
+   - Tamaño de fuente de 18px
+   - Peso de fuente en negrita
+   - Relleno de 10px en vertical y 30px en horizontal
+   - Transformación de texto a mayúsculas
+   - Margen inferior de 15px
+   - Elemento de bloque (ocupa toda la anchura disponible)
+   - Margen izquierdo y derecho automáticos para centrar horizontalmente */
+.panel-servicios a {
+  background-color: #cd5759;
+  color: #ffffff;
+  text-decoration: none;
+  width: 70%;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel-servicios a:hover {
+  background-color: #d78081;
+}
+
+.texto-terapia h2 {
+  color: #cd5759;
+}
+/* Estilos para párrafos dentro de elementos con clase "frase-contacto":
+   - Color de texto en #cd5759 (rojo)
+   - Peso de fuente en negrita
+   - Relleno inferior y superior de 20px
+   - Texto centrado */
+.frase-contacto p {
+  color: #cd5759;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.texto-terapia h2 {
+  text-align: center;
+}
+
+/* Final Terapias*/
+
+/* Inicio testimoninos*/
+/* Estilos para elementos con clase "testimonio":
+   - Color de fondo en #d4e189 (verde claro)
+   - Relleno de 20px
+   */
+.testimonio {
+  background-color: #d4e189;
+  padding: 20px;
+}
+/* Estilos para encabezados <h2> dentro de elementos con clase "testimonio":
+   - Imagen de fondo en la parte inferior del encabezado
+   - Sin sombra de texto
+   - Texto centrado
+   - Posición de la imagen de fondo en la parte inferior
+   - No repetir la imagen de fondo
+   - Relleno superior de 30px
+   - Color de texto en #7ca45e (verde)
+   - Peso de fuente en negrita
+   - Tamaño de fuente en 35px */
+.testimonio h2 {
+  background-image: url(../img/acabamento-cabecalho-depoimento-mobile.png);
+  text-shadow: none;
+  text-align: center;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  color: #7ca45e;
+  font-weight: bold;
+  font-size: 35px;
+}
+/* Estilos para párrafos <p> dentro de elementos con clase "testimonio":
+   - Texto centrado
+   - Relleno izquierdo y derecho de 20px
+   - Relleno inferior de 20px
+   - Ancho automático */
+.testimonio p {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: auto;
+}
+/* Estilos para elementos con clase "nom-bre":
+   - Color de texto en #628645 (verde oscuro)
+   - Peso de fuente en negrita
+   - Tamaño de fuente en 25px */
+.nom-bre {
+  color: #628645;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#slider-id {
+  background-color: #d4e189;
+}
+
+/* Final testimonios*/
+
+/* inicio rodape pie de pagina*/
+.rodape {
+  background-color: #b48fff;
+}
+
+.rodape .larg {
+  padding: 40px 20px;
+}
+
+.rodape h2 {
+  text-align: center;
+  color: #ffffff;
+}
+/* Estilos para botones con clase "boton-contacto":
+   - Color de texto en blanco (#ffffff)
+   - Color de fondo en verde (#619a57)
+   - Borde redondeado de 36px
+   - Relleno superior e inferior de 25px, relleno izquierdo y derecho de 35px
+   - Tamaño de fuente en 16px
+   - Ancho ajustado al contenido
+   - Margen izquierdo de 20px
+   - Sombra de caja con desplazamiento en X y Y de 5px, y opacidad de 0.3 */
+.boton-contacto {
+  color: #ffffff;
+  background-color: #619a57;
+  border-radius: 36px;
+  padding: 25px 35px;
+  font-size: 16px;
+  width: fit-content;
+  margin-left: 20px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+/* Estilos generales para los enlaces dentro del botón con clase "boton-contacto":
+   - Sin decoración de texto
+   - Color de texto blanco (#ffffff)
+  */
+.boton-contacto a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+/* Estilos generales para el botón con clase "boton-contacto" cuando se encuentra en estado de "hover" (al pasar el cursor sobre él):
+   - Cambio de color de fondo a verde claro (#7ca45e) */
+.boton-contacto:hover {
+  background-color: #7ca45e;
+}
+/* Estilos generales para el contenedor con clase "atencion":
+   - Mostrado como un contenedor de elementos en línea con diseño flexible
+   - Dirección de flexión de columna (elementos apilados verticalmente)
+   - Elementos alineados al centro horizontalmente
+   - Ancho del 100%
+   - Alineación de texto centrada
+   - Margen superior e inferior de 20 píxeles */
+.atencion {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imagemcontacto {
+  width: 25%;
+}
+
+.atencion p {
+  color: #ffffff;
+}
+
+.atencion-horario {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.redes-social {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 25px;
+}
+/* Estilos generales para los botones de redes sociales con clase "btn-social":
+   - Altura y ancho de 50 píxeles, con marcado !important para priorizar estos valores
+   - Mostrado como un elemento en línea con diseño en bloque
+   - Sin relleno (padding) aplicado
+   - Margen horizontal de 5 píxeles */
+.btn-social {
+  height: 50px !important;
+  width: 50px !important;
+  display: inline-block;
+  padding: 0 !important;
+  margin: 0 5px;
+}
+
+.btn-facebook {
+  background-image: url(../img/contato-facebook-rodape.png);
+}
+
+.btn-facebook:hover {
+  background-image: url(../img/contato-facebook-rodape-hover.png);
+}
+
+.btn-instagran {
+  background-image: url(../img/contato-instagram-rodape.png);
+}
+
+.btn-instagran:hover {
+  background-image: url(../img/contato-instagram-rodape-hover.png);
+}
+
+.btn-linkedin {
+  background-image: url(../img/contato-linkedin-rodape.png);
+}
+
+.btn-linkedin:hover {
+  background-image: url(../img/contato-linkedin-rodape-hover.png);
+}
+
+/* final rodapé  pie de pagina*/
+
+/* Inicio Slider */
+/* Estilos para elementos con clase "coda-slider-wrapper":
+   - Limpieza de flotado (clear: both)
+   - Desbordamiento (overflow) con desplazamiento automático
+   - Margen superior e inferior de 20px, margen izquierdo y derecho automático
+   - Display de tipo flex con alineación y dirección especificadas */
+.coda-slider-wrapper {
+  clear: both;
+  overflow: auto;
+  margin: 20px auto;
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+}
+/* Estilos para elementos de navegación dentro de elementos con clase "coda-slider-wrapper":
+   - Propiedades para enlaces dentro de los botones de navegación */
+.coda-slider-wrapper .coda-nav-left a,
+.coda-slider-wrapper .coda-nav-right a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #ffffff;
+  color: #628645;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 30px;
+}
+.coda-slider-wrapper .coda-nav-left a:hover,
+.coda-slider-wrapper .coda-nav-right a:hover {
+  background: #628645;
+  color: #ffffff;
+}
+
+.coda-slider-wrapper .coda-nav-left,
+.coda-slider-wrapper .coda-nav-left-arrow {
+  clear: both;
+}
+.coda-slider-wrapper .coda-nav-left,
+.coda-slider-wrapper .coda-nav-right {
+  float: left;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+
+.coda-slider-wrapper .coda-slider {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #f2f2f2;
+  width: 700px;
+}
+.arrows .coda-slider {
+  margin: 0 10px;
+}
+.coda-slider-wrapper .coda-slider .panel-container {
+  position: relative;
+}
+.coda-slider-wrapper .coda-slider .panel-container .panel {
+  display: block;
+  float: left;
+}
+.coda-slider-wrapper .coda-slider .panel {
+  width: 235px;
+}
+.coda-slider-wrapper .coda-slider .panel p {
+  font-size: 16px;
+}
+/* Fim Slider */
+
+/* Configuracion icone whatsapp*/
+
+.rwb-tooltip {
+  background-color: #ffffff;
+}
+
+/* final Configuracion icone whatsapp */
+
+/* pequeño para celulares (landscape phones, 576px and up)*/
+@media (min-width: 425px) {
+  /* Inicio Slider  */
+  .coda-slider-wrapper .coda-slider .panel {
+    width: 285px;
+  }
+}
+
+/* Medio para tablests (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  /* inicio encabezado/menu*/
+  .logo-pri {
+    width: 250px;
+    margin: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  nav {
+    margin-right: 10px;
+  }
+
+  .esconder-celular {
+    display: initial;
+  }
+
+  .esconder-site {
+    display: none;
+  }
+
+  /* inicio foto con logo*/
+
+  .principal .larg {
+    display: flex !important;
+    align-content: center;
+    align-items: center;
+  }
+
+  .foto {
+    position: relative;
+    top: 40px;
+  }
+
+  /* inicio sobremi*/
+
+  .imagem-quadro {
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  /* inicio Terapias*/
+  .terapia {
+    background-position: 0 115%;
+  }
+
+  .panel-servicios {
+    width: 42%;
+  }
+
+  .texto-terapia {
+    width: 100%;
+  }
+
+  .terapia .larg {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  /* inicio testimonios*/
+
+  .testimonio {
+    padding: 30px 20px;
+  }
+
+  .testimonio h2 {
+    background-image: url(../img/acabamento-cabecalho-depoimento.png);
+    padding-top: 55px;
+    font-size: 60px;
+  }
+
+  .testimonio p {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .nom-bre {
+    font-size: 30px;
+  }
+
+  /* inicio rodape pie de pagina*/
+
+  .boton-contacto {
+    margin-left: 19%;
+    font-size: 20px;
+  }
+
+  .imagemcontacto {
+    width: 25%;
+  }
+
+  .atencion {
+    width: 49%;
+  }
+
+  .atencion p {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .atencion-horario {
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+  }
+
+  .redes-social {
+    padding-bottom: 30px;
+  }
+
+  .btn-social {
+    margin: 0 10px;
+  }
+
+  /* Inicio Slider  */
+  .coda-slider-wrapper .coda-slider .panel {
+    width: 630px;
+  }
+  .coda-slider-wrapper .coda-slider .panel p {
+    font-size: 18px;
+  }
+}
+
+/* xl extra largo para dispositivos (large desktops, 1200px and up)*/
+@media (min-width: 1024px) {
+  .logo-pri {
+    width: 300px;
+    margin: 15px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  nav {
+    margin-right: 15px;
+  }
+
+  /* inicio foto con logo*/
+
+  .foto {
+    width: 450px;
+    top: 90px;
+  }
+
+  .logo-foto {
+    width: 400px;
+  }
+
+  .sobre-parte1 {
+    width: 55%;
+    padding-top: 60px;
+    padding-left: 50px;
+    padding-right: 40px;
+  }
+
+  .sobre-parte2 {
+    width: 45%;
+  }
+
+  .sobreMi .larg {
+    display: inline-flex;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin: 20px 0;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin: 20px 0;
+  }
+
+  .sobreMi p {
+    margin-left: 40px;
+  }
+
+  .imagem-quadro {
+    width: 60%;
+    margin-left: 30%;
+    position: relative;
+    margin-bottom: -100px;
+  }
+
+  .sobre-parte1 h2,
+  .sobre-parte2 h2 {
+    text-align: left;
+  }
+
+  /* inicio Terapias*/
+
+  .panel-servicios {
+    width: 30%;
+  }
+
+  .terapia {
+    background-position: 0 130%;
+  }
+
+  .texto-terapia h2 {
+    text-align: left;
+  }
+
+  /* inicio testimonios*/
+
+  .testimonio {
+    padding: 30px 60px;
+  }
+
+  /* inicio rodape pie de pagina*/
+
+  .boton-contacto {
+    margin-left: 30%;
+  }
+
+  .atencion {
+    width: 49%;
+  }
+
+  .imagemcontacto {
+    width: 25%;
+  }
+
+  .atencion p {
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  .atencion-horario {
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+  }
+
+  .redes-social {
+    padding-bottom: 30px;
+  }
+
+  .btn-social {
+    padding: 0 15px;
+  }
+
+  /* Inicio Slider  */
+  .coda-slider-wrapper .coda-slider .panel {
+    width: 700px;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}

@@ -1,0 +1,649 @@
+@font-face {
+  font-family: "Jost";
+  src: url("./font/Jost-Regular.woff2") format("woff2"),
+    url("./font/Jost-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #737373;
+}
+
+
+/* Estilos para el encabezado (header):
+   - Fondo blanco
+   - Fijado en la parte superior de la ventana
+   - Z-index alto para superponer otros elementos
+   - Ancho completo
+   - Sombra suave para crear profundidad */
+header {
+  background-color: #ffffff;
+  position: fixed !important;
+  z-index: 999999;
+  width: 100%;
+  box-shadow: 5px 5px 5px 0px rgb(0 0 0 / 30%);
+}
+
+/* Estilos para la clase .menu:
+   - Ancho completo para abarcar el contenedor
+   - Modelo de caja flexible para distribuir el espacio entre elementos
+   - Alineación vertical del contenido al centro
+   - Distribución horizontal del espacio entre elementos
+   - Alineación vertical de elementos estirándolos para llenar la altura */
+.menu {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Estilos para la barra de navegación (nav):
+   - Utiliza flexbox para alinear los elementos horizontalmente
+   - Alineación vertical de los elementos al centro
+   - Margen derecho para separación entre elementos */
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+}
+
+/* Estilos para los elementos de lista en la barra de navegación (nav li):
+   - Mostrar los elementos de lista en línea
+   - Aplicar negrita al texto de los elementos
+   - Agregar espacio interno alrededor de los elementos */
+
+nav li {
+  display: inline;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* Estilos para los enlaces en la barra de navegación (nav a):
+   - Quitar la decoración de subrayado de los enlaces
+   - Aplicar negrita al texto de los enlaces
+   - Color de texto gris para los enlaces
+   - Tamaño de fuente de 11 píxeles */
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #737373;
+  font-size: 11px;
+}
+
+
+/* Estilos para los enlaces en estado de hover (nav a:hover):
+   - Cambio de color de texto al pasar el cursor sobre los enlaces
+   - Restaurar la decoración de subrayado al pasar el cursor sobre los enlaces */
+nav a:hover {
+  color: #ca4949;
+  text-decoration: underline;
+}
+
+
+/* Estilos para el logotipo en la barra de navegación (.logo-pri):
+   - Ancho de 120 píxeles para el logotipo
+   - Margen de 10 píxeles en todas las direcciones alrededor del logotipo */
+.logo-pri {
+  width: 120px;
+  margin: 10px;
+}
+
+
+/* Estilos para la sección principal (.principal):
+   - Color de fondo #f6dfd7
+   - Imagen de fondo desde la ruta "../img/fundo-banner-principal.png"
+   - Ancho del 100% de la sección
+   - Fijación de la imagen de fondo mientras se desplaza
+   - Espacio interno en la parte superior de 60 píxeles y en la parte inferior de 20 píxeles */
+.principal {
+  background-color: #f6dfd7;
+  background-image: url(../img/fundo-banner-principal.png);
+  width: 100%;
+  background-attachment: fixed;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+
+/* Estilos para el contenedor dentro de la sección principal (.principal .larg):
+   - Utiliza el modelo de cuadrícula CSS para el diseño de elementos */
+.principal .larg {
+  display: grid;
+}
+
+/* Estilos para el logotipo de la foto (.logo-foto):
+   - Ancho de 300 píxeles para el logotipo de la foto
+   - Centrar horizontalmente el logotipo utilizando márgenes automáticos en los lados izquierdo y derecho */
+.logo-foto {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Estilos para la imagen de foto (.foto):
+   - Borde redondeado con un radio del 50%
+   - Ancho de 300 píxeles para la imagen de foto
+   - Centrar horizontalmente la imagen utilizando márgenes automáticos en los lados izquierdo y derecho */
+.foto {
+  border-radius: 50%;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Estilos para la sección "Sobre mí" (.sobreMi):
+   - Imagen de fondo desde la ruta "../img/flores-fundo-conheca.png"
+   - Color de fondo #b48fff
+   - Utiliza un contenedor de flexión en línea con contenido centrado
+   - Espacios internos en los lados izquierdo y derecho de 35 píxeles
+   - Espacios internos en la parte superior e inferior de 40 píxeles
+   - Fijación de la imagen de fondo mientras se desplaza
+   - Posición de fondo centrada horizontalmente con desplazamiento hacia la izquierda de 240 píxeles
+   - Ancho calculado del 100% del contenedor padre */
+.sobreMi {
+  background-image: url(../img/flores-fundo-conheca.png);
+  background-color: #b48fff;
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 35px;
+  padding-top: 40px;
+  padding-right: 35px;
+  padding-bottom: 40px;
+  background-attachment: fixed;
+  background-position: -240px center;
+  width: calc(100%);
+}
+
+
+/* Estilos generales para los encabezados <h2> dentro de la sección "Sobre mí":
+   - Color de texto blanco (#ffffff)
+   - Tamaño de fuente de 30 píxeles
+   - Sombra de texto con desplazamiento de 1 píxel en ambas direcciones y color negro (#000000)
+   - Márgenes superiores e inferiores de 15 píxeles para separación */
+h2 {
+  color: #ffffff;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px #000000;
+  margin: 15px 0;
+}
+
+
+/* Estilos generales para los encabezados <h3> dentro de la sección "Sobre mí":
+   - Tamaño de fuente de 25 píxeles
+   - Color de texto blanco (#ffffff)
+   - Márgenes superiores e inferiores de 15 píxeles para separación */
+h3 {
+  font-size: 25px;
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+/* Estilos generales para los párrafos <p> dentro de la sección "Sobre mí":
+   - Tamaño de fuente de 18 píxeles
+   - Altura de línea de 26 píxeles para un espaciado adecuado entre líneas */
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+
+/* Estilos generales para la imagen con clase "imagem-quadro":
+   - Ancho del 100% del contenedor
+   - Margen superior e inferior de 40 píxeles */
+.imagem-quadro {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Estilos generales para el contenedor con clase "larg":
+   - Ancho máximo de 1300 píxeles para limitar el ancho del contenido
+   - Margen horizontal automático para centrar el contenedor en la pantalla */
+.larg {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Estilos generales para los encabezados <h2> dentro de las secciones "sobre-parte1" y "sobre-parte2":
+   - Alineación de texto centrada */
+.sobre-parte1 h2,
+.sobre-parte2 h2 {
+  text-align: center;
+}
+
+/* inicio rodape pie de pagina*/
+/* Estilos generales para el pie de página con clase "rodape":
+   - Color de fondo violeta (#b48fff) */
+.rodape {
+  background-color: #b48fff;
+}
+
+/* Estilos generales para el contenedor con clase "larg" dentro del pie de página con clase "rodape":
+   - Relleno de 40 píxeles en la dirección superior e inferior
+   - Relleno de 20 píxeles en la dirección izquierda y derecha */
+.rodape .larg {
+  padding: 40px 20px;
+}
+
+/* Estilos generales para los encabezados <h2> dentro del pie de página con clase "rodape":
+   - Alineación de texto centrada
+   - Color de texto blanco (#ffffff) */
+.rodape h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+
+
+/* Estilos generales para el botón con clase "boton-contacto":
+   - Color de texto blanco (#ffffff)
+   - Color de fondo verde (#619a57)
+   - Radio de borde de 36 píxeles para esquinas redondeadas
+   - Relleno de 25 píxeles en la dirección superior e inferior y 35 píxeles en la dirección izquierda y derecha
+   - Tamaño de fuente de 16 píxeles
+   - Ancho ajustado al contenido
+   - Margen izquierdo de 20 píxeles
+   - Sombra de caja con desplazamiento de 5 píxeles en dirección diagonal */
+
+.boton-contacto {
+  color: #ffffff;
+  background-color: #619a57;
+  border-radius: 36px;
+  padding: 25px 35px;
+  font-size: 16px;
+  width: fit-content;
+  margin-left: 20px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos generales para los enlaces dentro del botón con clase "boton-contacto":
+   - Sin decoración de texto
+   - Color de texto blanco (#ffffff)
+  */
+.boton-contacto a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+}
+
+/* Estilos generales para el botón con clase "boton-contacto" cuando se encuentra en estado de "hover" (al pasar el cursor sobre él):
+   - Cambio de color de fondo a verde claro (#7ca45e) */
+.boton-contacto:hover {
+  background-color: #7ca45e;
+}
+
+/* Estilos generales para el contenedor con clase "atencion":
+   - Mostrado como un contenedor de elementos en línea con diseño flexible
+   - Dirección de flexión de columna (elementos apilados verticalmente)
+   - Elementos alineados al centro horizontalmente
+   - Ancho del 100%
+   - Alineación de texto centrada
+   - Margen superior e inferior de 20 píxeles */
+.atencion {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.imagemcontacto {
+  width: 25%;
+}
+
+.atencion p {
+  color: #ffffff;
+}
+
+.atencion-horario {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.redes-social {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 25px;
+}
+
+/* Estilos generales para los botones de redes sociales con clase "btn-social":
+   - Altura y ancho de 50 píxeles, con marcado !important para priorizar estos valores
+   - Mostrado como un elemento en línea con diseño en bloque
+   - Sin relleno (padding) aplicado
+   - Margen horizontal de 5 píxeles */
+.btn-social {
+  height: 50px !important;
+  width: 50px !important;
+  display: inline-block;
+  padding: 0 !important;
+  margin: 0 5px;
+}
+
+.btn-facebook {
+  background-image: url(../img/contato-facebook-rodape.png);
+}
+
+.btn-facebook:hover {
+  background-image: url(../img/contato-facebook-rodape-hover.png);
+}
+
+.btn-instagran {
+  background-image: url(../img/contato-instagram-rodape.png);
+}
+
+.btn-instagran:hover {
+  background-image: url(../img/contato-instagram-rodape-hover.png);
+}
+
+.btn-linkedin {
+  background-image: url(../img/contato-linkedin-rodape.png);
+}
+
+.btn-linkedin:hover {
+  background-image: url(../img/contato-linkedin-rodape-hover.png);
+}
+
+/* final rodapé pie de pagina */
+/* Estilos generales para el contenedor con clase "reservation":
+   - Relleno de 6 unidades rem en todas las direcciones
+   - Relleno superior adicional de 100 píxeles
+   - Mostrado como un contenedor de elementos con diseño flexible en columna
+   - Espacio entre elementos de 2 unidades rem
+   - Elementos alineados al centro horizontalmente
+   - Fondo de repetición de imagen no repetido */
+.reservation {
+  padding: 6rem;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Estilos generales para el contenedor con clase "reservation__heading":
+   - Alineación de texto centrada
+   - Fuente personalizada "wolf"
+   - fuente en negrita (bold) */
+.reservation__heading {
+  text-align: center;
+  font-family: "wolf";
+  font-weight: bold;
+}
+
+/* Estilos específicos para el elemento <h5> dentro del contenedor con clase "reservation__heading":
+   - Fuente personalizada "wolf"
+   - Peso de fuente ligero (300)
+   - Tamaño de fuente de 5.6 unidades rem */
+.reservation__heading h5 {
+  font-family: "wolf";
+  font-weight: 300;
+  font-size: 5.6rem;
+}
+
+/* Estilos específicos para el elemento <h4> dentro del contenedor con clase "reservation__heading":
+   - Fuente personalizada "wolf"
+   - Peso de fuente en negrita (bold)
+   - Tamaño de fuente de 2 unidades rem */
+.reservation__heading h4 {
+  font-family: "wolf";
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+/* Estilos para el formulario con clase "reservation__form":
+   - Utilización de CSS Grid para la disposición de elementos
+   - Definición de columnas y filas utilizando fracciones (1fr)
+   - Definición de áreas de cuadrícula utilizando "grid-template-areas"
+   - Ancho máximo del formulario de 36 rem
+   - Espaciado (gap) entre elementos de 1 rem */
+.reservation__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "name   email"
+    "comment   comment"
+    "button    button";
+  width: 36rem;
+  gap: 1rem;
+}
+
+/* Estilos para los elementos <input> dentro del formulario con clase "reservation__form":
+   - Relleno (padding) de 0.75 rem en vertical y 1 rem en horizontal
+   - Fuente personalizada "wolf" o, si no está disponible, fuentes cursivas genéricas
+   - Color de texto negro */
+.reservation__form input {
+  padding: 0.75rem 1rem;
+  font-family: "wolf", cursive;
+  font-weight: 300;
+  color: black;
+}
+
+.reservation__form .name {
+  grid-area: name;
+}
+
+.reservation__form .email {
+  grid-area: email;
+}
+
+.reservation__form .comment {
+  grid-area: comment;
+}
+
+.reservation__form .button {
+  grid-area: button;
+  border: 0;
+  background-color: #cd5759;
+  font-family: "Alfa Slab One", cursive;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Medio para tablests (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  /* inicio encabezado/menu*/
+  .logo-pri {
+    width: 250px;
+    margin: 10px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  nav {
+    margin-right: 10px;
+  }
+
+  .esconder-celular {
+    display: initial;
+  }
+
+  .esconder-site {
+    display: none;
+  }
+
+  /* inicio foto con logo*/
+
+  .principal .larg {
+    display: flex !important;
+    align-content: center;
+    align-items: center;
+  }
+
+  .foto {
+    position: relative;
+    top: 40px;
+  }
+
+  /* inicio sobremi*/
+
+  .imagem-quadro {
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  
+
+
+  /* inicio rodape pie de pagina*/
+
+  .boton-contacto {
+    margin-left: 19%;
+    font-size: 20px;
+  }
+
+  .imagemcontacto {
+    width: 25%;
+  }
+
+  .atencion {
+    width: 49%;
+  }
+
+  .atencion p {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+  .atencion-horario {
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: 30px;
+  }
+
+  .redes-social {
+    padding-bottom: 30px;
+  }
+
+  .btn-social {
+    margin: 0 10px;
+  }
+
+  
+}
+
+  /* xl extra largo para dispositivos (large desktops, 1200px and up)*/
+  @media (min-width: 1024px) {
+    .logo-pri {
+      width: 300px;
+      margin: 15px;
+    }
+
+    nav a {
+      font-size: 16px;
+    }
+
+    nav {
+      margin-right: 15px;
+    }
+
+    /* inicio foto con logo*/
+
+    .foto {
+      width: 450px;
+      top: 90px;
+    }
+
+    .logo-foto {
+      width: 400px;
+    }
+
+    .sobre-parte1 {
+      width: 55%;
+      padding-top: 60px;
+      padding-left: 50px;
+      padding-right: 40px;
+    }
+
+    .sobre-parte2 {
+      width: 45%;
+    }
+
+    .sobreMi .larg {
+      display: flex;
+      justify-content: center;
+    }
+
+    h2 {
+      font-size: 40px;
+      margin: 24px 0;
+    }
+
+    h3 {
+      font-size: 30px;
+      margin: 20px 0;
+    }
+
+    .sobreMi p {
+      margin-left: 40px;
+    }
+
+    .imagem-quadro {
+      width: 60%;
+      margin-left: 30%;
+      position: relative;
+      margin-bottom: -100px;
+    }
+
+    .sobre-parte1 h2,
+    .sobre-parte2 h2 {
+      text-align: left;
+    }
+
+    /* inicio rodape pie de pagina*/
+
+    .boton-contacto {
+      margin-left: 33%;
+    }
+
+    .atencion {
+      width: 49%;
+    }
+
+    .imagemcontacto {
+      width: 25%;
+    }
+
+    .atencion p {
+      font-size: 23px;
+      line-height: 35px;
+    }
+
+    .atencion-horario {
+      margin-top: 20px;
+      padding: 10px;
+      padding-bottom: 30px;
+    }
+
+    .redes-social {
+      padding-bottom: 30px;
+    }
+
+    .btn-social {
+      padding: 0 15px;
+    }
+
+    footer#atenciones.rodape div.larg h2 {
+      padding-left: 34px;
+    }
+  }
+
